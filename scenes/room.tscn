@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://l45mriwdxvba"]
+
+[ext_resource type="Script" uid="uid://e6tskchrfbqu" path="res://scripts/generate_room.gd" id="1_jn645"]
+[ext_resource type="Script" uid="uid://8jqsrk1fmj1t" path="res://scripts/tile_material_manager.gd" id="2_qvc4m"]
+[ext_resource type="Material" uid="uid://wh7c2km0d2le" path="res://materials/dirt_mat.tres" id="3_7dqbv"]
+[ext_resource type="Material" uid="uid://dkyqdldkr75uq" path="res://materials/brick_mat.tres" id="4_ybpoa"]
+[ext_resource type="Material" uid="uid://x1w87l8sliqd" path="res://materials/wood_mat.tres" id="5_qtoah"]
+[ext_resource type="Material" uid="uid://di86nfu8rbqiw" path="res://materials/metal_mat.tres" id="6_eom3m"]
+
+[node name="Room" type="Node2D"]
+script = ExtResource("1_jn645")
+
+[node name="TileMaterialManager" type="Node" parent="." node_paths=PackedStringArray("layer_dirt", "layer_brick", "layer_wood", "layer_metal")]
+script = ExtResource("2_qvc4m")
+material_dirt = ExtResource("3_7dqbv")
+material_brick = ExtResource("4_ybpoa")
+material_wood = ExtResource("5_qtoah")
+material_metal = ExtResource("6_eom3m")
+layer_dirt = NodePath("../Dirt")
+layer_brick = NodePath("../Brick")
+layer_wood = NodePath("../Wood")
+layer_metal = NodePath("../Metal")
+metadata/_custom_type_script = "uid://8jqsrk1fmj1t"
+
+[node name="Wood" type="TileMapLayer" parent="."]
+
+[node name="Dirt" type="TileMapLayer" parent="."]
+
+[node name="Metal" type="TileMapLayer" parent="."]
+
+[node name="Brick" type="TileMapLayer" parent="."]

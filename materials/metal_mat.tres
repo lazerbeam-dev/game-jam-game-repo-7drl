@@ -1,0 +1,32 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://di86nfu8rbqiw"]
+
+[ext_resource type="Shader" uid="uid://cnsv2i3kqbbno" path="res://shaders/tile_metal.gdshader" id="1_0n86n"]
+[ext_resource type="Texture2D" uid="uid://cwh5uo4rr2eho" path="res://sprites/noise/Grainy/Grainy 8 - 256x256.png" id="2_02v30"]
+[ext_resource type="Texture2D" uid="uid://cujgobkc55eld" path="res://sprites/noise/Milky/Milky 7 - 256x256.png" id="3_coojg"]
+[ext_resource type="Texture2D" uid="uid://knvqy85epvo5" path="res://sprites/noise/Techno/Techno 7 - 256x256.png" id="4_7qwb8"]
+[ext_resource type="Texture2D" uid="uid://yrseixv4egy0" path="res://sprites/noise/Turbulence/Turbulence 6 - 256x256.png" id="5_o4i00"]
+[ext_resource type="Texture2D" uid="uid://c57imrjhlrd8b" path="res://sprites/noise/Turbulence/Turbulence 13 - 256x256.png" id="6_lbsq5"]
+
+[resource]
+shader = ExtResource("1_0n86n")
+shader_parameter/noise_grainy = ExtResource("2_02v30")
+shader_parameter/noise_milky = ExtResource("3_coojg")
+shader_parameter/noise_techno = ExtResource("4_7qwb8")
+shader_parameter/noise_turbulence = ExtResource("5_o4i00")
+shader_parameter/noise_world = ExtResource("6_lbsq5")
+shader_parameter/color_shadow = Color(0.141, 0.145, 0.173, 1)
+shader_parameter/color_steel = Color(0.408, 0.435, 0.486, 1)
+shader_parameter/color_highlight = Color(0.729, 0.745, 0.788, 1)
+shader_parameter/color_rust = Color(0.529, 0.239, 0.063, 1)
+shader_parameter/tile_size_px = 64.0
+shader_parameter/grain_scale = 3.5
+shader_parameter/milky_scale = 1.8
+shader_parameter/scratch_thresh = 0.84
+shader_parameter/scratch_strength = 0.2
+shader_parameter/panel_scale = 1.0
+shader_parameter/panel_thresh = 0.86
+shader_parameter/panel_depth = 0.65
+shader_parameter/rust_thresh = 0.58
+shader_parameter/world_scale = 0.003
+shader_parameter/room_seed = 0.0
+shader_parameter/wear_level = 0.2

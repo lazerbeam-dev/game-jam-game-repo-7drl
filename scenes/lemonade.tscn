@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xm3qvbj8n7a"]
+
+[ext_resource type="Script" uid="uid://bqb22pdapl6k4" path="res://scripts/lemonade_character.gd" id="1_char"]
+[ext_resource type="Texture2D" uid="uid://bl46njvtxc1j8" path="res://sprites/lemonade.png" id="2_spr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_col"]
+radius = 24.0
+
+[node name="LemonadeCharacter" type="CharacterBody2D"]
+script = ExtResource("1_char")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_spr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_col")

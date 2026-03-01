@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://wh7c2km0d2le"]
+
+[ext_resource type="Shader" uid="uid://bd8txhwvpmhb1" path="res://shaders/tile_dirt.gdshader" id="1_dthiw"]
+[ext_resource type="Texture2D" uid="uid://621jt00khjln" path="res://sprites/noise/Craters/Craters 14 - 256x256.png" id="2_4ewn1"]
+[ext_resource type="Texture2D" uid="uid://uu8y1pt1eq8p" path="res://sprites/noise/Perlin/Perlin 1 - 256x256.png" id="3_d3u04"]
+[ext_resource type="Texture2D" uid="uid://lyx2gpyd7nn1" path="res://sprites/noise/Turbulence/Turbulence 9 - 256x256.png" id="4_xsalt"]
+[ext_resource type="Texture2D" uid="uid://dpmvttpeprlyk" path="res://sprites/noise/Super Perlin/Super Perlin 1 - 256x256.png" id="5_4ad2s"]
+
+[resource]
+shader = ExtResource("1_dthiw")
+shader_parameter/noise_perlin = ExtResource("3_d3u04")
+shader_parameter/noise_turbulence = ExtResource("4_xsalt")
+shader_parameter/noise_craters = ExtResource("2_4ewn1")
+shader_parameter/noise_world = ExtResource("5_4ad2s")
+shader_parameter/color_dark = Color(0.22, 0.122, 0.059, 1)
+shader_parameter/color_mid = Color(0.38, 0.259, 0.157, 1)
+shader_parameter/color_light = Color(0.522, 0.376, 0.251, 1)
+shader_parameter/tile_size_px = 64.0
+shader_parameter/local_scale = 2.2
+shader_parameter/world_scale = 0.003
+shader_parameter/crater_thresh = 0.68
+shader_parameter/crater_strength = 0.6
+shader_parameter/room_seed = 0.0
+shader_parameter/wear_level = 0.2

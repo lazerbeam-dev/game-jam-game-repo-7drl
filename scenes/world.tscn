@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3fja0ejmm1h0"]
+
+[ext_resource type="Script" uid="uid://bj8wrvs5gfyuw" path="res://scripts/world_manager.gd" id="1_world"]
+[ext_resource type="PackedScene" uid="uid://c5xm3qvbj8n7a" path="res://scenes/lemonade.tscn" id="2_lemon"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_world")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+
+[node name="LemonadeCharacter" parent="." instance=ExtResource("2_lemon")]
+z_index = 1
+
+[node name="Rooms" type="Node2D" parent="."]
+z_index = -20
